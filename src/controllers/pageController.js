@@ -34,7 +34,7 @@ router.get('/:userName', async (request, response) => {
       // caso haja algúm erro após as verificações a variável err capitura o erro e a api retorna o status 500 e informa o erro ocorrido
       response.status(500).json({ message: `Encontramos um erro: ${err}` });
       console.log(results[0].linkedin)
-      console('pageController')
+      console.log('pageController')
     }
   });
 
