@@ -47,7 +47,7 @@ router.get('/', async (request, response) => {
       }
     } catch (err) {
       response.status(500).json({ message: `Encontramos um erro: ${err}` });
-      console('userController')
+      console.log('userController')
     }
   });
   
