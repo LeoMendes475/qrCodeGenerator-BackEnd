@@ -14,14 +14,13 @@ router.get('/:userName', async (request, response) => {
       } else {le.log(results)
         console.log(results[0].linkedin)
         response.send(`
-        <div style="display: flex;flex-direction: column;    align-items: center;">
+        <div style="display: flex;flex-direction: column; align-items: center;">
           <h2>Hello, my name is ${userName}</h2>
           <h1>My history</h1>
 
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 
-          <div style="display: inl
-        consoine-block; margin-top: 20px">
+          <div style="display: inline-block; margin-top: 20px">
             <a style="background-color: #fff;border: 1px solid;border-radius: 8px 8px 8px 8px;font-weight: bold;font-size: 20px; width: 30vw;height: 50px;padding: 14px 20px;cursor: pointer;text-decoration: none;    margin-left: 20px;" href="${results[0].github}" target="_blank">Github</a>
             
             <a style="background-color: #fff;border: 1px solid;border-radius: 8px 8px 8px 8px;font-weight: bold;font-size: 20px; width: 30vw;height: 50px;padding: 14px 20px;cursor: pointer;text-decoration: none;    margin-left: 20px;" href="${results[0].linkedin}" target="_blank">Linkedin</a>
@@ -34,6 +33,7 @@ router.get('/:userName', async (request, response) => {
     catch (err) {
       // caso haja algúm erro após as verificações a variável err capitura o erro e a api retorna o status 500 e informa o erro ocorrido
       response.status(500).json({ message: `Encontramos um erro: ${err}` });
+      console.log(results[0].linkedin)
     }
   });
 
