@@ -11,7 +11,8 @@ router.get('/:userName', async (request, response) => {
     try {
       if (results.length == 0) {
         response.status(204).end();
-      } else {le.log(results)
+      } else {
+        console.log(results)
         console.log(results[0].linkedin)
         response.send(`
         <div style="display: flex;flex-direction: column; align-items: center;">
