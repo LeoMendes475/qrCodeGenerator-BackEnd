@@ -11,6 +11,7 @@ router.get('/:userName', async (request, response) => {
     try {
       if (results.length == 0) {
         response.status(204).end();
+        console.log('pageController Ok!')
       } else {
         console.log(results)
         console.log(results[0].linkedin)
