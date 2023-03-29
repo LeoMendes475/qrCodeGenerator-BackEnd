@@ -1,6 +1,6 @@
 import express, { response, request } from "express";
 import { body, validationResult } from "express-validator";
-import db from "../services/userservice.js";
+import db from "../services/userService.js";
 const router = express.Router();
 
 // Método POST, tem a função de enviar e receber dados, neste exemplo ele envia para a service os dados recebidos do body do front-end
